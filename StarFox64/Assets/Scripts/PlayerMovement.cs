@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector3 movement = Vector3.zero;
         float horInput = Input.GetAxis("Horizontal");
-        float vertInput = Input.GetAxis("Vertical");
+        float vertInput = -Input.GetAxis("Vertical"); // due to game design control is inverted
         if (horInput != 0 || vertInput != 0)
         {
             movement.x = horInput * movementSpeed;
@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             movement.y = gravity; 
         }
-        Debug.Log(Vector3.forward);
         movement *= Time.deltaTime;
         _controller.Move(movement);
 
