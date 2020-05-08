@@ -12,27 +12,13 @@ public class CameraFollow : MonoBehaviour {
 
     private float _rotY;
     private Vector3 _offset;
-
-    // Use this for initialization
-    void Start() {
-        /*_rotY = transform.eulerAngles.y;
-        _offset = target.position - transform.position;*/
-    }
+    
 	
     // Update is called once per frame
     void LateUpdate() {
-        /*float horInput = Input.GetAxis("Horizontal");
-        if (horInput != 0) {
-            _rotY += horInput * rotSpeed;
-        } else {
-            _rotY += Input.GetAxis("Mouse X") * rotSpeed * 3;
-        }
 
-        Quaternion rotation = Quaternion.Euler(0, _rotY, 0);
-        transform.position = target.position - (rotation * _offset);
-        transform.LookAt(target);*/
-        Vector3 pointB = target.position - target.forward * 10f + target.up * 2f;
-        transform.position = Vector3.Lerp(transform.position, pointB, 5f * Time.deltaTime);
+    
+        transform.position = Vector3.Lerp(transform.position, target.position, 5f * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, 5f * Time.deltaTime);
     }
 }
