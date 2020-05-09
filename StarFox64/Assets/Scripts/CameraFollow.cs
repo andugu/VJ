@@ -19,6 +19,7 @@ public class CameraFollow : MonoBehaviour {
 
     
         transform.position = Vector3.Lerp(transform.position, target.position, 5f * Time.deltaTime);
-        transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, 5f * Time.deltaTime);
+        Quaternion newRotation = new Quaternion(target.rotation.x, target.rotation.y, Mathf.Clamp(target.rotation.z, -0.1f, 0.1f), target.rotation.w);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 5f * Time.deltaTime);
     }
 }

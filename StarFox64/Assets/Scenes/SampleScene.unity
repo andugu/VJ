@@ -452,7 +452,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 966501f5145631f40a4c2c91deafbe25, type: 2}
+  - {fileID: 2100000, guid: 4325335110ac577429773380c3bae939, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1980525653}
-  rotSpeed: 1.5
+  rotSpeed: 1
 --- !u!1 &1680759827
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667552425144, guid: 38bf4c09e9b195540bb5f4c91750e4e5,
+        type: 3}
+      propertyPath: rotSpeed
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38bf4c09e9b195540bb5f4c91750e4e5, type: 3}

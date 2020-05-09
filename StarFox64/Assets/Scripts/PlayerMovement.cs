@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour {
         
             // clamp rotation 
             Quaternion tmp = transform.rotation;
-            tmp.y = Mathf.Clamp(tmp.y, 0, 0);
-            tmp.z = Mathf.Clamp(tmp.z, -0.15f, 0.15f);
+            tmp.x = Mathf.Clamp(tmp.x, -0.20f, 0.20f);
+            tmp.z = Mathf.Clamp(tmp.z, -0.30f, 0.30f);
             transform.rotation = new Quaternion(tmp.x, tmp.y, tmp.z, tmp.w);
         }
 
@@ -51,8 +51,8 @@ public class PlayerMovement : MonoBehaviour {
         // IF NOT VERTICAL INPUT => APPLY DOWN_FORCE 
         if (vertInput == 0) {
             movement.y = gravity; 
-           transform.rotation = Quaternion.Lerp(transform.rotation, 
-                new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w),  
+            transform.rotation = Quaternion.Lerp(transform.rotation, 
+                new Quaternion(0, transform.rotation.y, transform.rotation.z, transform.rotation.w),  
                 Time.deltaTime * rotationGravity);
         }
 
