@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 102
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -391,23 +391,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6cfbffff
-      m_LastClickedID: -1172
-      m_ExpandedIDs: 6efbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6cfbffff6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Laser
+        m_OriginalName: Laser
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -12210
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -453,9 +453,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -369.88403, y: 36.181927, z: -211.80536}
+    m_Target: {x: -102.56005, y: 361.29077, z: -955.63696}
     speed: 2
-    m_Value: {x: -369.88403, y: 36.181927, z: -211.80536}
+    m_Value: {x: -102.56005, y: 361.29077, z: -955.63696}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -501,13 +501,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24718976, y: -0.39721674, z: 0.111975305, w: -0.87670904}
+    m_Target: {x: -0.27666676, y: -0.28776163, z: 0.087207235, w: -0.91273594}
     speed: 2
-    m_Value: {x: -0.24751948, y: -0.39457673, z: 0.11123095, w: -0.8778787}
+    m_Value: {x: -0.2766608, y: -0.28775543, z: 0.08720535, w: -0.91271627}
   m_Size:
-    m_Target: 295.45236
+    m_Target: 781.6621
     speed: 2
-    m_Value: 309.3742
+    m_Value: 781.6621
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -597,19 +597,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\POLMO\Documents\VJ\StarFox64
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 82340000
-    m_LastClickedID: 13442
+    m_SelectedIDs: 7e340000
+    m_LastClickedID: 13438
     m_ExpandedIDs: 000000006e34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -716,9 +716,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 1014
-    width: 2040
-    height: 353
+    y: 1006
+    width: 2007
+    height: 354
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:

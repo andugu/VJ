@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 2937558475478392826}
   - component: {fileID: 7908031843298604191}
   - component: {fileID: 8296172667552425144}
+  - component: {fileID: 7908031844946364768}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -326,10 +327,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 70
-  movementSpeed: 50
+  rotSpeed: 300
+  movementSpeed: 0
   gravity: 0
   rotationGravity: 5
+--- !u!114 &7908031844946364768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206504360354328041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a90b5803017c8499799c76398d3284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser: {fileID: 5914952703122442754, guid: 7f2e50ce6645aab43a9f6f717b1ef076, type: 3}
+  target: {fileID: 7908031844642285915}
+  force: 1000
 --- !u!1 &2496282286515423945
 GameObject:
   m_ObjectHideFlags: 0
