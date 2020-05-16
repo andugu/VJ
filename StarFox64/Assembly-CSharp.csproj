@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\DestroyOnRadius.cs" />
      <Compile Include="Assets\Scripts\NoRotate.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\RollMovement.cs" />
      <Compile Include="Assets\Scripts\ShootLaser.cs" />
+     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
