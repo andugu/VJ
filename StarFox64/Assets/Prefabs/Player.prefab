@@ -258,9 +258,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2937558475478392826}
-  - component: {fileID: 7908031843298604191}
-  - component: {fileID: 8296172667552425144}
   - component: {fileID: 7908031844946364768}
+  - component: {fileID: 271020487}
+  - component: {fileID: 271020488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -298,40 +298,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 5.03, y: 0, z: 0}
---- !u!143 &7908031843298604191
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2206504360354328041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2.9
-  m_Radius: 1.68
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0.18, y: 0.65, z: 0.03}
---- !u!114 &8296172667552425144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2206504360354328041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotSpeed: 300
-  movementSpeed: 60
-  gravity: 0
-  rotationGravity: 5
 --- !u!114 &7908031844946364768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +312,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 5914952703122442754, guid: 7f2e50ce6645aab43a9f6f717b1ef076, type: 3}
   target: {fileID: 7908031844674146295}
-  force: 5000
+  force: 6000
+--- !u!114 &271020487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206504360354328041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7ab98144eecc741961cdfdb864b6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &271020488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206504360354328041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 60
+  movementSpeed: 20
+  gravity: -2
+  rotationGravity: 30
 --- !u!1 &2496282286515423945
 GameObject:
   m_ObjectHideFlags: 0

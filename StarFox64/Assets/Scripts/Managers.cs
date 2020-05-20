@@ -7,11 +7,13 @@ public class Managers : MonoBehaviour {
     private void Awake() {
         // the game manager must persist in all the scenes 
         DontDestroyOnLoad(gameObject); 
+        // remove cursor 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; 
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         
     }
 
