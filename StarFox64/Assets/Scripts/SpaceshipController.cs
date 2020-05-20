@@ -76,7 +76,18 @@ public class SpaceshipController : MonoBehaviour {
 
 
     private void Yaw() {
-        
+        if (_horInput != 0)
+                {
+                    transform.Rotate(new Vector3(0, 1, 0), -_horInput * rotSpeed * Time.deltaTime);  
+                    float angle = transform.eulerAngles.y;
+                    float maxAngle = 360 - maxRotation;
+                    if (angle > maxRotation && angle < maxAngle)
+                    {
+                        if (angle - maxRotation < maxAngle - angle) angle = maxRotation;
+                        else angle = maxAngle;
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, angle, transform.eulerAngles.z);
+                    }
+                }
     }
 
     private void Forward()
