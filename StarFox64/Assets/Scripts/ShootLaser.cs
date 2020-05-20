@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShootLaser : MonoBehaviour {
 
 
-    private KeyCode shootCode = KeyCode.L; 
+    private KeyCode shootCode = KeyCode.J; 
     [SerializeField] private GameObject laser;
     [SerializeField] private GameObject target;
     public float force = 20.0f; 

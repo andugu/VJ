@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\NoRotate.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RollMovement.cs" />
+     <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Scripts\ShootLaser.cs" />
      <Compile Include="Assets\Scripts\SpaceshipIdle.cs" />
      <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
