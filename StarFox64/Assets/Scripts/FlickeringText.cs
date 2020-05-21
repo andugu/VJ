@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,7 @@ public class FlickeringText : MonoBehaviour {
         StartCoroutine(ChangeColor());
     }
 
+   
 
     IEnumerator ChangeColor() {
         while (true)
@@ -31,8 +33,7 @@ public class FlickeringText : MonoBehaviour {
                 first = false; 
                 _text.color = secondColor;
             }
-            else
-            {
+            else {
                 first = true; 
                 _text.color = firstColor;
             } 
