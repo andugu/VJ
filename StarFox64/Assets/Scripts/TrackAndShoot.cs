@@ -10,17 +10,15 @@ public class TrackAndShoot : MonoBehaviour
     [SerializeField] private GameObject origin;
     [SerializeField] private Vector3 predictionPos; 
     public float force = 20.0f;
-    private float timer = 0.0f;
-    // Start is called before the first frame update
-    void Start(){}
+
+    public float attackDistance;
 
     // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime *100;
-        if (timer >= 3.0f){
-        	// Shoot spaceship
-        	// instantiate a new laser at current position
+    void Update() {
+        
+        if (Vector3.Distance(target.transform.position, origin.transform.position) < attackDistance) {
+            // Shoot spaceship
+            // instantiate a new laser at current position
             var outLaser = Instantiate(laser, origin.transform.position, Quaternion.identity);
             // must have a rigid body
             // apply a force to the laser
@@ -28,8 +26,9 @@ public class TrackAndShoot : MonoBehaviour
             // Shoot to spaceship    
             var targetPos = target.transform.position + predictionPos;
             var direction = (targetPos - origin.transform.position).normalized;
-            rigidBody.AddForce(direction * force);
-            timer = 0.0f;
+            rigidBody.AddForce(direction * force);  
         }
+        
+
     }
 }
