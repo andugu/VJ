@@ -12,6 +12,7 @@ public class SpaceshipController : MonoBehaviour {
     private Vector3 _movement;
     private Rigidbody _rigidbody;
 
+    [SerializeField] private Vector3 direction; 
     public float maxRotation = 15f; 
     public float rotSpeed = 60f;
     public float movementSpeed = 20.0f;
@@ -21,6 +22,7 @@ public class SpaceshipController : MonoBehaviour {
 
     private void Start()
     {
+        direction = (direction - transform.position).normalized; 
         _rigidbody = GetComponent<Rigidbody>(); 
     }
 
@@ -92,9 +94,8 @@ public class SpaceshipController : MonoBehaviour {
 
     private void Forward()
     {
-        _movement = transform.forward * movementSpeed; 
-        Vector3 moveDirection = transform.TransformDirection(_movement);
-        _rigidbody.velocity = moveDirection; 
+
+        transform.position += direction * movementSpeed * Time.deltaTime; 
     }
 
 
