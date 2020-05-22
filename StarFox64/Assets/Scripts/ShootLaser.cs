@@ -11,9 +11,7 @@ public class ShootLaser : MonoBehaviour {
     [SerializeField] private GameObject target;
     public float force = 20.0f; 
     
-    void Start(){
-        
-    }
+    void Start(){}
 
     // Update is called once per frame
     void Update() {
