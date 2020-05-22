@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class TextSelector : MonoBehaviour {
 
+    
+    
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip moveSound; 
+    
     public Text[] texts;
     public GameObject[] pointers;
     
@@ -26,9 +31,11 @@ public class TextSelector : MonoBehaviour {
         if (texts.Length > 0)
         {
             if (Input.GetKeyDown(KeyCode.S) && _pos < texts.Length - 1) {
+                soundSource.PlayOneShot(moveSound);
                 _pos++;
             }
             else if (Input.GetKeyDown(KeyCode.W) && _pos > 0) {
+                soundSource.PlayOneShot(moveSound);
                 _pos--; 
             }
             foreach (var t in texts) {

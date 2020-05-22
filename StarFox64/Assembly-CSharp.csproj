@@ -73,7 +73,6 @@
      <Compile Include="Assets\Scripts\SpaceshipController.cs" />
      <Compile Include="Assets\Scripts\SpaceshipIdle.cs" />
      <Compile Include="Assets\Scripts\TextSelector.cs" />
-     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
