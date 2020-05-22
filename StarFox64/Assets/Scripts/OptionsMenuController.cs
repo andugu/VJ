@@ -17,7 +17,7 @@ public class OptionsMenuController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Return)) {
             var pos = _selector.GetSelectedScene();
             MenuManager.MenuState state = MenuManager.MenuState.CreditsMenu;
             if (pos == 0) state = MenuManager.MenuState.Gaming;

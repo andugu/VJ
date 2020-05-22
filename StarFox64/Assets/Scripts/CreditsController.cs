@@ -9,6 +9,6 @@ public class CreditsController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Space))_manager.ChangeScene(MenuManager.MenuState.MenuSelector);
+        if(Input.GetKeyDown(KeyCode.Return))_manager.ChangeScene(MenuManager.MenuState.MenuSelector);
     }
 }
