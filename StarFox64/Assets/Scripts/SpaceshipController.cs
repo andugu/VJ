@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class SpaceshipController : MonoBehaviour {
 
 
@@ -13,19 +12,25 @@ public class SpaceshipController : MonoBehaviour {
     private Rigidbody _rigidbody;
     [SerializeField] private float minRotation = -45f;
     [SerializeField] private float maxRotation = 45f;
-    private float _breakForce; 
-
+    private float _breakForce;
+    private float _accelerationForce;
+    private bool _canApplyForce; 
+    
     [SerializeField] private Vector3 direction;
     public float rotSpeed = 60f;
     public float movementSpeed = 20.0f;
     public float gravity = -2.0f;
     public float rotationGravity = 30f;
+    public float secondsBetweenForces = 8f;
+    public float forceDuration = 2f; 
 
-
-    private void Start() {
+    private void Start()
+    {
+        _canApplyForce = true; 
         direction = (direction - transform.position).normalized; 
         _rigidbody = GetComponent<Rigidbody>();
-        _breakForce = 1; 
+        _breakForce = 1;
+        _accelerationForce = 1; 
     }
 
     void Update() {
@@ -43,16 +48,37 @@ public class SpaceshipController : MonoBehaviour {
     }
 
     private void ApplyBreak() {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && _canApplyForce)
         {
-            _breakForce = 0.4f; 
+            _breakForce = 0.4f;
+            _canApplyForce = false; 
+            StartCoroutine(WaitToBreak());
+            StartCoroutine(WaitForForceRecharge()); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.B) && _canApplyForce)
+        {
+            _accelerationForce = 1.8f;
+            _canApplyForce = false; 
             StartCoroutine(WaitToAccelerate());
+            StartCoroutine(WaitForForceRecharge()); 
         }
     }
 
+    private IEnumerator WaitForForceRecharge() {
+        yield return new WaitForSeconds(secondsBetweenForces);
+        _canApplyForce = true; 
+    }
+    
     private IEnumerator WaitToAccelerate()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(forceDuration);
+        _accelerationForce = 1; 
+    }
+    
+    private IEnumerator WaitToBreak()
+    {
+        yield return new WaitForSeconds(forceDuration);
         _breakForce = 1; 
     }
     
@@ -69,8 +95,8 @@ public class SpaceshipController : MonoBehaviour {
             rot.y = 0; 
             transform.localRotation = Quaternion.Euler(rot);
         }
-        else
-        {
+        else {
+            transform.position += new Vector3(0, 1, 0) * (gravity * Time.deltaTime);
             Quaternion idleQuaternion = transform.rotation;
             idleQuaternion.x = 0; 
             transform.rotation = Quaternion.Lerp(transform.rotation, idleQuaternion, rotationGravity *Time.deltaTime);
@@ -98,7 +124,7 @@ public class SpaceshipController : MonoBehaviour {
     
 
     private void Forward() {
-        transform.position += direction * (_breakForce * movementSpeed * Time.deltaTime); 
+        transform.position += direction * (_breakForce * movementSpeed * Time.deltaTime * _accelerationForce); 
     }
 
 
