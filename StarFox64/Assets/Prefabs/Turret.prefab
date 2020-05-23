@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 858925174138557722}
   m_LocalRotation: {x: 0, y: 0.93568134, z: 0, w: 0.3528462}
   m_LocalPosition: {x: -147, y: 26.54, z: -500}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1553487336028162443}
   - {fileID: 4870298765221799375}
@@ -180,6 +180,7 @@ MonoBehaviour:
   target: {fileID: 0}
   origin: {fileID: 2861623075579630418}
   predictionPos: {x: 0, y: 0, z: 32}
+  shootsPerCharge: 30
   force: 6000
   attackDistance: 500
 --- !u!114 &8296172669453904217

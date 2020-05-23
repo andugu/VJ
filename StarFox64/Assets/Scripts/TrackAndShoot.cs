@@ -8,15 +8,28 @@ public class TrackAndShoot : MonoBehaviour
     [SerializeField] private GameObject laser;
     [SerializeField] private GameObject target;
     [SerializeField] private GameObject origin;
-    [SerializeField] private Vector3 predictionPos; 
+    [SerializeField] private Vector3 predictionPos;
+    public float shootsPerCharge = 50f;
+    private float _shoots;
+    private bool _charging; 
+    
     public float force = 20.0f;
 
     public float attackDistance;
 
+    private void Start()
+    {
+        _charging = false; 
+        _shoots = 0; 
+    }
+
     // Update is called once per frame
     void Update() {
-        
-        if (Vector3.Distance(target.transform.position, origin.transform.position) < attackDistance) {
+        if (_shoots >= shootsPerCharge && !_charging) {
+            StartCoroutine(Recharge());
+            _charging = true; 
+        }
+        else if (!_charging && Vector3.Distance(target.transform.position, origin.transform.position) < attackDistance) {
             // Shoot spaceship
             // instantiate a new laser at current position
             var outLaser = Instantiate(laser, origin.transform.position, Quaternion.identity);
@@ -26,10 +39,17 @@ public class TrackAndShoot : MonoBehaviour
             // Shoot to spaceship    
             var targetPos = target.transform.position + predictionPos;
             var direction = (targetPos - origin.transform.position).normalized;
-            rigidBody.AddForce(direction * force);  
+            rigidBody.AddForce(direction * force);
+            _shoots++; 
         }
         
 
+    }
+
+    private IEnumerator Recharge() {
+        yield return  new WaitForSeconds(3);
+        _shoots = 0;
+        _charging = false; 
     }
     
 }

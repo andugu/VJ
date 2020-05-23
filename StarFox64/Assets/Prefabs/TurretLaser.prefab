@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 662383556939056541}
   - component: {fileID: 5404622873981117237}
+  - component: {fileID: -8067043972913111574}
   m_Layer: 0
   m_Name: TurretLaser
   m_TagString: Untagged
@@ -4766,8 +4767,8 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
@@ -4812,3 +4813,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c8c61781d312847ba12490153de840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8067043972913111574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c219a9b1ddc454fb33163bb8e4533c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthValue: 1
