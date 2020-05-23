@@ -5,18 +5,14 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
 
+
+    [SerializeField] private GameObject healthBar; 
     public float health; 
     
     
-    
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        var barScale = healthBar.transform.localScale;
+        barScale.x = health;
+        healthBar.transform.localScale = barScale;
     }
 }

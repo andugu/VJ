@@ -12,6 +12,7 @@ public class FlickeringText : MonoBehaviour {
     public Color secondColor = Color.red;
     public float timeLapse = 3;
 
+    
     private Text _text;
     private bool first;
     void Start()
@@ -22,11 +23,13 @@ public class FlickeringText : MonoBehaviour {
         StartCoroutine(ChangeColor());
     }
 
-   
+
 
     IEnumerator ChangeColor() {
+        
         while (true)
         {
+            
             yield return new WaitForSeconds(timeLapse);
             if (first)
             {

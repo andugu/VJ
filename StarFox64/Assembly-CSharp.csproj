@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\NoRotate.cs" />
      <Compile Include="Assets\Scripts\OptionsMenuController.cs" />
      <Compile Include="Assets\Scripts\PathLimits.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\RollMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToTarget.cs" />
