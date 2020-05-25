@@ -58,13 +58,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ClosingDoors.cs" />
      <Compile Include="Assets\Scripts\CreditsController.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\DestroyOnCollision.cs" />
      <Compile Include="Assets\Scripts\DestroyOnRadius.cs" />
+     <Compile Include="Assets\Scripts\Destroyable.cs" />
      <Compile Include="Assets\Scripts\FlickeringText.cs" />
+     <Compile Include="Assets\Scripts\GrangaController.cs" />
+     <Compile Include="Assets\Scripts\InstructionsController.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
@@ -73,6 +77,7 @@
      <Compile Include="Assets\Scripts\PathLimits.cs" />
      <Compile Include="Assets\Scripts\PauseMenuController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\RemoveCursor.cs" />
      <Compile Include="Assets\Scripts\RollMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToTarget.cs" />
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
@@ -101,6 +106,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

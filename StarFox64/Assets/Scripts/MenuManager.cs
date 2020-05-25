@@ -21,20 +21,12 @@ public class MenuManager : MonoBehaviour {
     public GameObject creditsMenu; 
     
     
-    private void Awake() {
-        // the game manager must persist in all the scenes 
-        // DontDestroyOnLoad(gameObject); 
-        // remove cursor 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        _menuState = MenuState.MainMenu;
-        _level = 1; 
-    }
 
     private void Start() {
         DeactivateMenus();
         mainMenu.SetActive(true);
-        
+        _menuState = MenuState.MainMenu;
+                _level = 1; 
     }
 
     public void SetLevel(uint level)

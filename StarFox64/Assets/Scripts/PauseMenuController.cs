@@ -6,6 +6,7 @@ public class PauseMenuController : MonoBehaviour {
 
     // objects to be paused 
 
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject pauseMenu; 
 
     // Update is called once per frame
@@ -14,9 +15,10 @@ public class PauseMenuController : MonoBehaviour {
             if (pauseMenu.activeSelf) {
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1;
+                audioSource.Play();
             }
-            else
-            {
+            else {
+                audioSource.Stop();
                 Time.timeScale = 0; 
                 pauseMenu.SetActive(true);
             }

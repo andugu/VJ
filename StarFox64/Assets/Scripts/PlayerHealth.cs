@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
 
-
-
     [SerializeField] private GameObject healthBar;
     private float _barWidth;
     private float _initialPos; 
@@ -30,5 +28,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         health -= value; 
     }
+
+    
     
 }

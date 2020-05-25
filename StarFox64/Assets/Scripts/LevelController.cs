@@ -21,10 +21,11 @@ public class LevelController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             var pos = _selector.GetSelectedScene();
-            if (pos == 2) _manager.ChangeScene(MenuManager.MenuState.MenuSelector);
+            if (pos == 3) _manager.ChangeScene(MenuManager.MenuState.MenuSelector);
             else {
                 if (pos == 0) _manager.SetLevel(1);
-                if (pos == 1) _manager.SetLevel(2);
+                else if (pos == 1) _manager.SetLevel(2);
+                else if(pos == 2)_manager.SetLevel(3);
                 _manager.ChangeScene(MenuManager.MenuState.Gaming);
             }
             
