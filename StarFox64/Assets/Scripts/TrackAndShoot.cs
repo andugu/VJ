@@ -29,7 +29,7 @@ public class TrackAndShoot : MonoBehaviour
             StartCoroutine(Recharge());
             _charging = true; 
         }
-        else if (!_charging && Vector3.Distance(target.transform.position, origin.transform.position) < attackDistance) {
+        else if (!_charging && Vector3.Distance(target.transform.position, origin.transform.position) < attackDistance && target.transform.position.z <= origin.transform.position.z) {
             // Shoot spaceship
             // instantiate a new laser at current position
             var outLaser = Instantiate(laser, origin.transform.position, Quaternion.identity);
