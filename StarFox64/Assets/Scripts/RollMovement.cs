@@ -10,9 +10,9 @@ public class RollMovement : MonoBehaviour {
     private KeyCode rollKey = KeyCode.R;
     
     
-    void Update() {
+    void LateUpdate() {
         if (Input.GetKeyDown(rollKey)) {
-            transform.Rotate(new Vector3(0, 0, 1), 359);
+            transform.Rotate(new Vector3(0, 0, 1), 6000);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpaceshipController : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class SpaceshipController : MonoBehaviour {
     private float _vertInput;
     private Vector3 _movement;
     private Rigidbody _rigidbody;
+    private readonly Color original = new Color(0.3113208f, 0.4540634f, 1, 1); 
+    private readonly Color inactive = Color.gray;
+    [SerializeField] private Text forceText;
     [SerializeField] private float minRotation = -45f;
     [SerializeField] private float maxRotation = 45f;
     private float _breakForce;
@@ -34,6 +38,8 @@ public class SpaceshipController : MonoBehaviour {
     }
 
     void Update() {
+        // SET FORCE COLOR 
+        
         // GET INPUT
         _movement = Vector3.zero;
         _horInput = Input.GetAxis("Horizontal");
@@ -52,6 +58,7 @@ public class SpaceshipController : MonoBehaviour {
         {
             _breakForce = 0.4f;
             _canApplyForce = false; 
+            forceText.color = inactive; 
             StartCoroutine(WaitToBreak());
             StartCoroutine(WaitForForceRecharge()); 
         }
@@ -59,7 +66,8 @@ public class SpaceshipController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.B) && _canApplyForce)
         {
             _accelerationForce = 1.8f;
-            _canApplyForce = false; 
+            _canApplyForce = false;
+            forceText.color = inactive; 
             StartCoroutine(WaitToAccelerate());
             StartCoroutine(WaitForForceRecharge()); 
         }
@@ -67,7 +75,8 @@ public class SpaceshipController : MonoBehaviour {
 
     private IEnumerator WaitForForceRecharge() {
         yield return new WaitForSeconds(secondsBetweenForces);
-        _canApplyForce = true; 
+        _canApplyForce = true;
+        forceText.color = original; 
     }
     
     private IEnumerator WaitToAccelerate()

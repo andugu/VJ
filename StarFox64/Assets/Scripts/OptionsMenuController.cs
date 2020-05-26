@@ -17,14 +17,20 @@ public class OptionsMenuController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
             var pos = _selector.GetSelectedScene();
-            MenuManager.MenuState state = MenuManager.MenuState.CreditsMenu;
-            if (pos == 0) state = MenuManager.MenuState.Gaming;
-            if (pos == 1) state =  MenuManager.MenuState.LevelsMenu;
-            if (pos == 2) state =  MenuManager.MenuState.InstructionsMenu; 
-             
-            _manager.ChangeScene(state);
+            if (pos == 4) Application.Quit(); 
+            else{
+                
+                MenuManager.MenuState state = MenuManager.MenuState.CreditsMenu;
+                if (pos == 0) state = MenuManager.MenuState.Gaming;
+                else if (pos == 1) state =  MenuManager.MenuState.LevelsMenu;
+                else if (pos == 2) state =  MenuManager.MenuState.InstructionsMenu; 
+            
+                _manager.ChangeScene(state);
+            }
+            
         }
               
     }
