@@ -8,8 +8,8 @@ public class DestroyOnCollision : MonoBehaviour {
         Debug.Log("COLLISION");
         var destroyable = other.gameObject.GetComponent<Destroyable>();
         Debug.Log(destroyable);
-        if (destroyable != null)
-        {
+        if (destroyable != null){
+            destroyable.Explode(); 
             Destroy(other.gameObject);
         }
         Destroy(gameObject);

@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroyable : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Destroyable : MonoBehaviour{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    private bool destroyed = false;
+    [SerializeField] private GameObject explosionPrefab;
+
+    public void Explode(){
+        if(explosionPrefab != null && !destroyed){
+            var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            explosion.transform.localScale *= 3;
+            destroyed = true;
+            Destroy(explosion, 1);
+        }
     }
 }

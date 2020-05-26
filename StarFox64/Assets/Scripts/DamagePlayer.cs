@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour {
 
-    private AudioSource soundSource; 
-    
-    [SerializeField] private AudioClip hitSound; 
-    [SerializeField] private GameObject explosionPrefab; 
+    private AudioSource soundSource;
+
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private float healthValue;
-    private static bool _animating; 
-    
+    private static bool _animating;
+
     private void Start()
     {
-        _animating = false; 
+        _animating = false;
         soundSource = GetComponent<AudioSource>();
     }
 
@@ -29,11 +29,12 @@ public class DamagePlayer : MonoBehaviour {
 
     private IEnumerator Animate()
     {
-        _animating = true; 
-        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity); 
+        _animating = true;
+        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         soundSource.PlayOneShot(hitSound);
-        yield return new WaitForSeconds(1);
-        _animating = false; 
+        Destroy(explosion, 1);
+        yield return new WaitForSeconds(2);
+        _animating = false;
     }
-    
+
 }
