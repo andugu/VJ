@@ -386,8 +386,8 @@ GameObject:
   - component: {fileID: 2020094712291204419}
   - component: {fileID: 976442407}
   - component: {fileID: 976442408}
-  - component: {fileID: 976442401}
   - component: {fileID: 1742275376165655482}
+  - component: {fileID: 976442401}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -483,7 +483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6cef589c55fcc46ac68c35dbfe693f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 0}
   healthBar: {fileID: 0}
+  healthFill: {fileID: 0}
   health: 100
 --- !u!114 &976442408
 MonoBehaviour:
@@ -501,6 +503,20 @@ MonoBehaviour:
   rightLimit: 15
   upperLimit: 25
   lowerLimit: 3
+--- !u!114 &1742275376165655482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206504360354328041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0959fcb5e0c19df46bbc2b76bbc3da05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  scorePerFrame: 10
 --- !u!54 &976442401
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -517,20 +533,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1742275376165655482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2206504360354328041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0959fcb5e0c19df46bbc2b76bbc3da05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  scorePerFrame: 0.05
 --- !u!1 &2496282286515423945
 GameObject:
   m_ObjectHideFlags: 0

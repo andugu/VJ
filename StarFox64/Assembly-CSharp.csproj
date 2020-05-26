@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\DestroyOnRadius.cs" />
      <Compile Include="Assets\Scripts\Destroyable.cs" />
      <Compile Include="Assets\Scripts\FlickeringText.cs" />
+     <Compile Include="Assets\Scripts\GameBehaviour.cs" />
      <Compile Include="Assets\Scripts\GrangaController.cs" />
      <Compile Include="Assets\Scripts\InstructionsController.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
@@ -88,6 +89,7 @@
      <Compile Include="Assets\Scripts\SpaceshipIdle.cs" />
      <Compile Include="Assets\Scripts\TextSelector.cs" />
      <Compile Include="Assets\Scripts\TrackAndShoot.cs" />
+     <Compile Include="Assets\Scripts\WinOnEnter.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/POLMO/Documents/VJ/StarFox64/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
