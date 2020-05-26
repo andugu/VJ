@@ -2,26 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
     [SerializeField] private GameObject healthBar;
-    private float _barWidth;
-    private float _initialPos; 
     public float health;
+    private Slider healthSlider;
 
-    private void Start() {
-        var barScale = healthBar.transform.localScale;
-        _barWidth = barScale.x;
-        _initialPos = healthBar.transform.position.x; 
+    private void Start()
+    {
+        healthSlider = healthBar.GetComponent<Slider>(); 
     }
-    
 
-    void Update() {
-        var barScale = healthBar.transform.localScale;
-        barScale.x = _barWidth * (health / 100f);
-        healthBar.transform.localScale = barScale;
-        //Debug.Log(health);
+
+    void Update()
+    {
+        healthSlider.value = health; 
     }
 
     public void reduce(float value)

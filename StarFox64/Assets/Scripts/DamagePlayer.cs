@@ -30,8 +30,11 @@ public class DamagePlayer : MonoBehaviour {
     private IEnumerator Animate()
     {
         _animating = true;
-        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        soundSource.PlayOneShot(hitSound);
+        GameObject explosion = null; 
+        if(explosionPrefab != null)
+            explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        if(soundSource != null && hitSound != null)
+            soundSource.PlayOneShot(hitSound);
         Destroy(explosion, 1);
         yield return new WaitForSeconds(2);
         _animating = false;
