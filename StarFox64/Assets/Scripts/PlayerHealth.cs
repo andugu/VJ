@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour {
         var barScale = healthBar.transform.localScale;
         barScale.x = _barWidth * (health / 100f);
         healthBar.transform.localScale = barScale;
-        Debug.Log(health);
+        //Debug.Log(health);
     }
 
     public void reduce(float value)

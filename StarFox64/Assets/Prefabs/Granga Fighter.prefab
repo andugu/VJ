@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 3763786854701520182}
   - component: {fileID: 5684369093466838904}
   - component: {fileID: 30737784}
+  - component: {fileID: -5236522981950849523}
+  - component: {fileID: 1437441907329851116}
   m_Layer: 0
   m_Name: Granga Fighter
   m_TagString: Untagged
@@ -197,6 +199,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 100
+--- !u!114 &-5236522981950849523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172643272650056170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f0e744d5bf9bd43839e154fb12ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &1437441907329851116
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172643272650056170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 42.33
+  m_Height: 18.168224
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3611509098877729664
 GameObject:
   m_ObjectHideFlags: 0
