@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3650989043851902134}
   - component: {fileID: 4758773957074258554}
   - component: {fileID: 33618725916536942}
+  - component: {fileID: -6881460478095946649}
   m_Layer: 0
   m_Name: asteroid_0
   m_TagString: Untagged
@@ -126,3 +127,18 @@ MonoBehaviour:
   hitSound: {fileID: 0}
   explosionPrefab: {fileID: 0}
   healthValue: 30
+--- !u!114 &-6881460478095946649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722875400473929149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f0e744d5bf9bd43839e154fb12ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 30
+  explosionPrefab: {fileID: 1840133731154982502, guid: 30d63603956ac854197850ca68fbea39,
+    type: 3}

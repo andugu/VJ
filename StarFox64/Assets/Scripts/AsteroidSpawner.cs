@@ -7,13 +7,13 @@ using Random = UnityEngine.Random;
 
 public class AsteroidSpawner : MonoBehaviour {
 
-    // the spawning area is represented by a cube  
-    // a cube can be represented with two 3D points 
+    // the spawning area is represented by a cube
+    // a cube can be represented with two 3D points
     public Vector3 minPos;
     public Vector3 maxPos;
-    public float initialAsteroids = 100; 
-    public float speed = 200f; 
-    // objects to spawn 
+    public float initialAsteroids = 100;
+    public float speed = 200f;
+    // objects to spawn
     public GameObject[] objects;
 
     private bool _spawn = false;
@@ -28,9 +28,9 @@ public class AsteroidSpawner : MonoBehaviour {
     void Update() {
         if (!_spawn)
         {
-            //StartCoroutine(Spawn()); 
+            //StartCoroutine(Spawn());
         }
-        
+
     }
 
     private void SpawnAsteroid()
@@ -40,18 +40,18 @@ public class AsteroidSpawner : MonoBehaviour {
             Random.Range(minPos.y, maxPos.y),
             Random.Range(minPos.z, maxPos.z));
         obj = Instantiate(obj, randPos, Quaternion.identity);
-        var rb = obj.GetComponent<Rigidbody>(); 
-        var direction = new Vector3(0, Random.Range(0, 1), 0).normalized;
+        var rb = obj.GetComponent<Rigidbody>();
+        var direction = Vector3.forward;
         rb.AddForce(Time.deltaTime * direction * speed);
     }
 
 
     private IEnumerator Spawn() {
-        _spawn = true; 
+        _spawn = true;
         SpawnAsteroid();
         yield return new WaitForSeconds(3);
-        _spawn = false; 
+        _spawn = false;
     }
-    
-    
+
+
 }
