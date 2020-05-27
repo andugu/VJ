@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\DestroyOnRadius.cs" />
      <Compile Include="Assets\Scripts\Destroyable.cs" />
      <Compile Include="Assets\Scripts\FlickeringText.cs" />
+     <Compile Include="Assets\Scripts\FollowTarget.cs" />
      <Compile Include="Assets\Scripts\GameBehaviour.cs" />
      <Compile Include="Assets\Scripts\GrangaController.cs" />
      <Compile Include="Assets\Scripts\InstructionsController.cs" />

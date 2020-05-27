@@ -11,7 +11,8 @@ public class TrackAndShoot : MonoBehaviour
     [SerializeField] private Vector3 predictionPos;
     public float shootsPerCharge = 50f;
     private float _shoots;
-    private bool _charging; 
+    private bool _charging;
+    private bool _followLaser = false; 
     
     public float force = 20.0f;
 
@@ -20,7 +21,11 @@ public class TrackAndShoot : MonoBehaviour
     private void Start()
     {
         _charging = false; 
-        _shoots = 0; 
+        _shoots = 0;
+        // follow laser only 
+        FollowTarget.target = target.transform;
+        var tmp = laser.GetComponent<FollowTarget>();
+        if (tmp != null) _followLaser = true; 
     }
 
     // Update is called once per frame
@@ -37,10 +42,19 @@ public class TrackAndShoot : MonoBehaviour
             // apply a force to the laser
             var rigidBody =  outLaser.GetComponent<Rigidbody>();
             // Shoot to spaceship    
-            var targetPos = target.transform.position + predictionPos;
-            var direction = (targetPos - origin.transform.position).normalized;
-            rigidBody.AddForce(direction * force);
+
+            if(!_followLaser) {
+                var targetPos = target.transform.position + predictionPos;
+                var direction = (targetPos - origin.transform.position).normalized;
+                rigidBody.AddForce(direction * force);
+            }
+            
+            
+            
             _shoots++; 
+            
+           
+
         }
         
 
