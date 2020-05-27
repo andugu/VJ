@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameBehaviour : MonoBehaviour {
 
     public string currentLevel; 
-    public string nextLevel; 
+    public string nextLevel;
+
+    public void Update()
+    {
+    	if (Input.GetKeyDown(KeyCode.R))
+    		SceneManager.LoadScene(currentLevel);
+    }
     
     public void WinGame()
     {

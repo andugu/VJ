@@ -13,19 +13,14 @@ public class TrackAndShoot : MonoBehaviour
     private float _shoots;
     private bool _charging;
     private bool _followLaser = false; 
-    
     public float force = 20.0f;
-
     public float attackDistance;
+    public Vector3 player;
 
     private void Start()
     {
         _charging = false; 
         _shoots = 0;
-        // follow laser only 
-        FollowTarget.target = target.transform;
-        var tmp = laser.GetComponent<FollowTarget>();
-        if (tmp != null) _followLaser = true; 
     }
 
     // Update is called once per frame
@@ -43,27 +38,17 @@ public class TrackAndShoot : MonoBehaviour
             var rigidBody =  outLaser.GetComponent<Rigidbody>();
             // Shoot to spaceship    
 
-            if(!_followLaser) {
-                var targetPos = target.transform.position + predictionPos;
-                var direction = (targetPos - origin.transform.position).normalized;
-                rigidBody.AddForce(direction * force);
-            }
-            
-            
+            var targetPos = target.transform.position + predictionPos;
+            var direction = (targetPos - origin.transform.position).normalized;
+            rigidBody.AddForce(direction * force);
             
             _shoots++; 
-            
-           
-
         }
-        
-
     }
 
     private IEnumerator Recharge() {
         yield return  new WaitForSeconds(3);
         _shoots = 0;
-        _charging = false; 
+        _charging = false;
     }
-    
 }
