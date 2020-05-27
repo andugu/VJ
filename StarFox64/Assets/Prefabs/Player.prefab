@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceText: {fileID: 0}
   minRotation: -45
   maxRotation: 23.49
   direction: {x: 0, y: 0, z: 1}
@@ -467,10 +468,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 1.69
   m_Height: 5.8
   m_Direction: 2
-  m_Center: {x: 0.4, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &976442407
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class FollowTarget : MonoBehaviour {
 
+
+    public Vector3 offset; 
     public static Transform target;
-    public float speed; 
+    public float speed;
     
-    void Update() {
-        if(transform.position.z < target.position.z - 100)Destroy(gameObject);
-        transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
+    
+    void Update()
+    {
+        transform.position = Vector3.Lerp(transform.position, target.position + offset, speed * Time.deltaTime);
     }
 }
