@@ -39,7 +39,8 @@ public class AsteroidSpawner : MonoBehaviour {
         Vector3 randPos = new Vector3(Random.Range(minPos.x, maxPos.x),
             Random.Range(minPos.y, maxPos.y),
             Random.Range(minPos.z, maxPos.z));
-        obj = Instantiate(obj, randPos, Quaternion.identity);
+        var randomRotation = Quaternion.Euler(Random.Range(0.0f, 360.0f), Random.Range(0.0f, 360.0f), Random.Range(0.0f, 360.0f));
+        obj = Instantiate(obj, randPos, randomRotation);
         var rb = obj.GetComponent<Rigidbody>();
         var direction = Vector3.forward;
         rb.AddForce(Time.deltaTime * direction * speed);

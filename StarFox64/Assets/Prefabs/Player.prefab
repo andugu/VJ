@@ -390,8 +390,8 @@ GameObject:
   - component: {fileID: 976442401}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Player
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceText: {fileID: 0}
-  minRotation: -45
+  minRotation: -23.49
   maxRotation: 23.49
   direction: {x: 0, y: 0, z: 1}
   rotSpeed: 120

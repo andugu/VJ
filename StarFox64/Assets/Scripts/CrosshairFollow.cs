@@ -23,7 +23,7 @@ public class CrosshairFollow : MonoBehaviour{
             pos.x += horInput * speed * Time.deltaTime;
         }
         else{
-          //pos = Vector3.Lerp(pos, new Vector3(initialPos.x, pos.y, pos.z), returnSpeed * Time.deltaTime);
+          pos = Vector3.Lerp(pos, new Vector3(initialPos.x, pos.y, pos.z), returnSpeed * Time.deltaTime);
         }
         if(vertInput != 0){
             pos.y += vertInput * speed * Time.deltaTime;

@@ -17,4 +17,10 @@ public class PlayerScore : MonoBehaviour {
         scoreText.text = (Convert.ToInt32(score)).ToString();
         score += scorePerFrame * Time.deltaTime; 
     }
+
+    public void AddScore(float s)
+    {
+        score += s; 
+    }
+    
 }

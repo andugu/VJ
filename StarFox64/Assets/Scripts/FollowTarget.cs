@@ -6,7 +6,7 @@ public class FollowTarget : MonoBehaviour {
 
 
     public Vector3 offset; 
-    public static Transform target;
+    public Transform target;
     public float speed;
     
     
