@@ -5,19 +5,34 @@ using UnityEngine;
 
 public class ShootLaser : MonoBehaviour {
 
-
     private KeyCode shootCode = KeyCode.Space; 
     [SerializeField] private GameObject laser;
     [SerializeField] private Transform target;
     [SerializeField] private Transform cameraView; 
-    public float force = 20.0f; 
+    public float force = 20.0f;
+    public float shootsPerCharge = 50f;
+    private float _shoots;
     
-    void Start(){}
+    void Start(){
+    	_shoots = 0;
+    }
 
     // Update is called once per frame
     void Update() {
+
+    	if (_shoots > 0){
+    		_shoots -= 1;
+    		// instantiate a new laser at current position 
+            var outLaser = Instantiate(laser, target.position, Quaternion.identity);
+            // must have a rigid body 
+            // apply a force to the laser
+            var rigidBody =  outLaser.GetComponent<Rigidbody>();
+            Vector3 direction = (target.position - cameraView.position).normalized; 
+            rigidBody.AddForce(direction * force);
+    	}
         
-        if (Input.GetKeyDown(shootCode)) {
+        else if (Input.GetKeyDown(shootCode)) {
+        	_shoots = 3;
             // instantiate a new laser at current position 
             var outLaser = Instantiate(laser, target.position, Quaternion.identity);
             // must have a rigid body 
