@@ -109,7 +109,7 @@ MonoBehaviour:
   laser: {fileID: 100000, guid: 66405a5a840355b489214db60c64d3b5, type: 3}
   target: {fileID: 1690293338}
   cameraView: {fileID: 0}
-  force: 15000
+  force: 10000
   shootsPerCharge: 50
 --- !u!114 &1690293340
 MonoBehaviour:
