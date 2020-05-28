@@ -229,7 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!114 &82911919 stripped
 MonoBehaviour:
@@ -443,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!1001 &189067898
 PrefabInstance:
@@ -887,7 +885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!1 &479557480 stripped
 GameObject:
@@ -1637,7 +1634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 100
 --- !u!114 &863798406
 MonoBehaviour:
@@ -1781,6 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869f875899a82664382f8a06ed030e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 976442406}
   target: {fileID: 1980525653}
   minRotation: -15
   maxRotation: 15
@@ -1892,16 +1889,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7908031844946364766}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &976442402 stripped
+--- !u!114 &976442406 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1742275376165655482, guid: 38bf4c09e9b195540bb5f4c91750e4e5,
+  m_CorrespondingSourceObject: {fileID: 271020488, guid: 38bf4c09e9b195540bb5f4c91750e4e5,
     type: 3}
   m_PrefabInstance: {fileID: 7908031844946364766}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976442400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0959fcb5e0c19df46bbc2b76bbc3da05, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &976442408 stripped
@@ -1928,7 +1925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!1 &1067425710 stripped
 GameObject:
@@ -2310,7 +2306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!4 &1742109129 stripped
 Transform:
@@ -2429,7 +2424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 976442402}
   additive: 300
 --- !u!1 &1911971226
 GameObject:
@@ -2853,6 +2847,10 @@ PrefabInstance:
       propertyPath: forceText
       value: 
       objectReference: {fileID: 693758828}
+    - target: {fileID: 271020488, guid: 38bf4c09e9b195540bb5f4c91750e4e5, type: 3}
+      propertyPath: rollSpeed
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 976442407, guid: 38bf4c09e9b195540bb5f4c91750e4e5, type: 3}
       propertyPath: game
       value: 
@@ -2869,6 +2867,10 @@ PrefabInstance:
       propertyPath: cameraView
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 1690293339, guid: 38bf4c09e9b195540bb5f4c91750e4e5, type: 3}
+      propertyPath: force
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 1742275376165655482, guid: 38bf4c09e9b195540bb5f4c91750e4e5,
         type: 3}
       propertyPath: scoreText

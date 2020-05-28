@@ -9,56 +9,88 @@ public class SpaceshipController : MonoBehaviour {
 
     private float _horInput;
     private float _vertInput;
-    private Vector3 _movement;
-    private Rigidbody _rigidbody;
-    private readonly Color original = new Color(0.3113208f, 0.4540634f, 1, 1); 
-    private readonly Color inactive = Color.gray;
+    private readonly Color _original = new Color(0.3113208f, 0.4540634f, 1, 1); 
+    private readonly Color _inactive = Color.gray;
+    private float _breakForce;
+    private float _accelerationForce;
+    private bool _canApplyForce;
+    private bool _rolling;
+    private float _rollingAngle;
+    private const float COMPLETE_ROLL = 360f; 
+    
     [SerializeField] private Text forceText;
     [SerializeField] private float minRotation = -45f;
     [SerializeField] private float maxRotation = 45f;
-    private float _breakForce;
-    private float _accelerationForce;
-    private bool _canApplyForce; 
-    
     [SerializeField] private Vector3 direction;
+    
     public float rotSpeed = 60f;
     public float movementSpeed = 20.0f;
     public float gravity = -2.0f;
     public float rotationGravity = 30f;
     public float secondsBetweenForces = 8f;
-    public float forceDuration = 2f; 
-
-    private void Start()
-    {
+    public float forceDuration = 2f;
+    // ROLLING VARIABLES 
+    public float totalRolls = 10f;
+    public float rollSpeed = 15f; // roll speed is angles per frame 
+    
+    private void Start() {
+        _rollingAngle = 0; 
+        _rolling = false; 
         _canApplyForce = true; 
-        direction = (direction - transform.position).normalized; 
-        _rigidbody = GetComponent<Rigidbody>();
+        direction = (direction - transform.position).normalized;
         _breakForce = 1;
         _accelerationForce = 1; 
     }
+    
 
     void Update() {
-        // SET FORCE COLOR 
-        
-        // GET INPUT
-        _movement = Vector3.zero;
         _horInput = Input.GetAxis("Horizontal");
         _vertInput = -Input.GetAxis("Vertical"); // due to game design control is inverted
         // the spaceship movement is simply based on 
         // the pitch, yaw and roll movements 
-        Pitch(); // up or down 
-        Roll(); // move sideways 
-        ApplyBreak(); 
+        RollEffect(); 
+        if (!_rolling) {
+            Pitch(); // up or down 
+            Roll(); // move sideways 
+            ApplyBreak(); 
+        }
+        
         Forward(); // move forward 
         
     }
+
+    public bool Rolling()
+    {
+        return _rolling; 
+    }
+
+    private void RollEffect() {
+        if (_rolling) {
+            RollRotate();
+        }
+        else if(Input.GetKeyDown(KeyCode.E)) {
+            _rolling = true;
+            RollRotate(); 
+        }
+    }
+
+    private void RollRotate() {
+        transform.Rotate(new Vector3(0, 0, 1), rollSpeed * Time.deltaTime);
+        _rollingAngle += rollSpeed * Time.deltaTime;
+        if (_rollingAngle >= COMPLETE_ROLL * totalRolls) {
+            _rolling = false;
+            _rollingAngle = 0; 
+        }
+    }
+    
+    
 
     private void ApplyBreak() {
         if (Input.GetKeyDown(KeyCode.F) && _canApplyForce)
         {
             _breakForce = 0.4f;
             _canApplyForce = false; 
-            forceText.color = inactive; 
+            forceText.color = _inactive; 
             StartCoroutine(WaitToBreak());
             StartCoroutine(WaitForForceRecharge()); 
         }
@@ -67,7 +99,7 @@ public class SpaceshipController : MonoBehaviour {
         {
             _accelerationForce = 1.8f;
             _canApplyForce = false;
-            forceText.color = inactive; 
+            forceText.color = _inactive; 
             StartCoroutine(WaitToAccelerate());
             StartCoroutine(WaitForForceRecharge()); 
         }
@@ -76,7 +108,7 @@ public class SpaceshipController : MonoBehaviour {
     private IEnumerator WaitForForceRecharge() {
         yield return new WaitForSeconds(secondsBetweenForces);
         _canApplyForce = true;
-        forceText.color = original; 
+        forceText.color = _original; 
     }
     
     private IEnumerator WaitToAccelerate()

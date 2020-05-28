@@ -84,7 +84,6 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScore.cs" />
      <Compile Include="Assets\Scripts\RemoveCursor.cs" />
-     <Compile Include="Assets\Scripts\RollMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToTarget.cs" />
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Scripts\ShootLaser.cs" />
