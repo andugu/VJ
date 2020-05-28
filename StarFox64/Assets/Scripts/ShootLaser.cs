@@ -8,7 +8,8 @@ public class ShootLaser : MonoBehaviour {
 
     private KeyCode shootCode = KeyCode.Space; 
     [SerializeField] private GameObject laser;
-    [SerializeField] private GameObject target;
+    [SerializeField] private Transform target;
+    [SerializeField] private Transform cameraView; 
     public float force = 20.0f; 
     
     void Start(){}
@@ -18,11 +19,12 @@ public class ShootLaser : MonoBehaviour {
         
         if (Input.GetKeyDown(shootCode)) {
             // instantiate a new laser at current position 
-            var outLaser = Instantiate(laser, target.transform.position, Quaternion.identity);
+            var outLaser = Instantiate(laser, target.position, Quaternion.identity);
             // must have a rigid body 
             // apply a force to the laser
             var rigidBody =  outLaser.GetComponent<Rigidbody>();
-            rigidBody.AddForce(target.transform.forward * force);
+            Vector3 direction = (target.position - cameraView.position).normalized; 
+            rigidBody.AddForce(direction * force);
         }
     }
 }

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound: {fileID: 0}
   explosionPrefab: {fileID: 0}
-  healthValue: 0
+  healthValue: 30
 --- !u!114 &8593352232727059269
 MonoBehaviour:
   m_ObjectHideFlags: 0
