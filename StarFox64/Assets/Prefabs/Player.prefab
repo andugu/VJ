@@ -109,7 +109,7 @@ MonoBehaviour:
   laser: {fileID: 100000, guid: 66405a5a840355b489214db60c64d3b5, type: 3}
   target: {fileID: 1690293338}
   cameraView: {fileID: 0}
-  force: 6000
+  force: 10000
 --- !u!114 &1690293340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +384,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2937558475478392826}
-  - component: {fileID: 271020487}
   - component: {fileID: 271020488}
   - component: {fileID: 2020094712291204419}
   - component: {fileID: 976442407}
@@ -426,19 +425,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 5.03, y: 0, z: 0}
---- !u!114 &271020487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2206504360354328041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7ab98144eecc741961cdfdb864b6e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rollSpeed: 0
 --- !u!114 &271020488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +447,8 @@ MonoBehaviour:
   rotationGravity: 5
   secondsBetweenForces: 8
   forceDuration: 2
+  totalRolls: 10
+  rollSpeed: 2000
 --- !u!136 &2020094712291204419
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ClosingDoors.cs" />
+     <Compile Include="Assets\Scripts\CopyText.cs" />
      <Compile Include="Assets\Scripts\CreditsController.cs" />
      <Compile Include="Assets\Scripts\CrosshairFollow.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
