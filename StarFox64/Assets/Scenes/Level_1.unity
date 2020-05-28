@@ -2634,6 +2634,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2851446694215876489, guid: bfae9c472d169d042ab8f2faceeb0649,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 787c45601f7d0d341af2435f5b06edf6,
+        type: 3}
+    - target: {fileID: 2851446694215876489, guid: bfae9c472d169d042ab8f2faceeb0649,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Press   P   to   resume
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2851446694721101906, guid: bfae9c472d169d042ab8f2faceeb0649,
         type: 3}
       propertyPath: m_LocalPosition.x

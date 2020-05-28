@@ -1249,6 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869f875899a82664382f8a06ed030e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 7908031844946364774}
   target: {fileID: 1980525653}
   minRotation: -15
   maxRotation: 15
@@ -1268,7 +1269,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 243b2b9f8b1d13f48879e96e2a356b8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e5c910742dd9c4e4d98b3851222c4278, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2605,5 +2606,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0959fcb5e0c19df46bbc2b76bbc3da05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7908031844946364774 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 271020488, guid: 38bf4c09e9b195540bb5f4c91750e4e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7908031844946364766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908031844946364767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d59769ac7119b74f99a0e8b079369fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
