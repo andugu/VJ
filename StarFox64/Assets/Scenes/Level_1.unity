@@ -148,6 +148,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 976442408}
+    - target: {fileID: 6353758866634381187, guid: c28414531739d9d48a6f76e10f8e19d4,
+        type: 3}
+      propertyPath: waitTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8188168546270548077, guid: c28414531739d9d48a6f76e10f8e19d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,7 +316,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 1030595392}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -509,6 +518,36 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8296172669453904217, guid: d81362ebfbf3cfd4eac1786fd55555fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d81362ebfbf3cfd4eac1786fd55555fb, type: 3}
+--- !u!1 &202811242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 202811243}
+  m_Layer: 0
+  m_Name: Granga Target (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &202811243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202811242}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -72.12, y: 15.5, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253551218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253551218, guid: bfae9c472d169d042ab8f2faceeb0649,
@@ -837,7 +876,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 1567723661}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -927,7 +970,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 202811242}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1308,6 +1355,12 @@ Transform:
   - {fileID: 668604155}
   - {fileID: 863798407}
   - {fileID: 1541524993}
+  - {fileID: 1030595393}
+  - {fileID: 202811243}
+  - {fileID: 1567723662}
+  - {fileID: 1661633333}
+  - {fileID: 1864501399}
+  - {fileID: 954344091}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1321,7 +1374,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 954344090}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1604,6 +1661,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 393868226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &954344090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954344091}
+  m_Layer: 0
+  m_Name: Granga Target (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954344091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954344090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -73.82, y: 17.54, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1918,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7908031844946364766}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1030595392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030595393}
+  m_Layer: 0
+  m_Name: Granga Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1030595393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030595392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 15.5, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1067425710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2861623075579630418, guid: d81362ebfbf3cfd4eac1786fd55555fb,
@@ -1847,7 +1964,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 1864501398}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2019,7 +2140,11 @@ PrefabInstance:
     - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 976442400}
+      objectReference: {fileID: 1661633332}
+    - target: {fileID: 30737784, guid: 5e5ee305840127f4b8bf9a6910950a8a, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1899437018866258937, guid: 5e5ee305840127f4b8bf9a6910950a8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2135,6 +2260,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 95643391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1567723661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567723662}
+  m_Layer: 0
+  m_Name: Granga Target (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567723662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567723661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -72.81, y: 15.5, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1661633332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661633333}
+  m_Layer: 0
+  m_Name: Granga Target (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661633333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661633332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -74.07, y: 15.5, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1801207299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2412,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1864501398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864501399}
+  m_Layer: 0
+  m_Name: Granga Target (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864501399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864501398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 17.69, z: -1395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661582681}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915629232 stripped
 GameObject:
