@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8384536491094468826}
   - component: {fileID: -7057525558317852901}
   - component: {fileID: 8593352232727059269}
+  - component: {fileID: 7236361145602021596}
   m_Layer: 0
   m_Name: asteroid_1
   m_TagString: Untagged
@@ -142,3 +143,16 @@ MonoBehaviour:
   size: 30
   explosionPrefab: {fileID: 1840133731154982502, guid: 30d63603956ac854197850ca68fbea39,
     type: 3}
+--- !u!114 &7236361145602021596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793132195329356488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additive: 1000

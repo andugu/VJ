@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 100000, guid: 66405a5a840355b489214db60c64d3b5, type: 3}
-  target: {fileID: 1690293334}
+  target: {fileID: 1690293338}
+  cameraView: {fileID: 0}
   force: 6000
 --- !u!114 &1690293340
 MonoBehaviour:
@@ -121,8 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12869f794be459e44841e254d044eb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  returnSpeed: 10
+  horizontalLimit: 5
+  verticalLimit: 2.5
+  speed: 15
+  returnSpeed: 1
 --- !u!1 &267905868810441226
 GameObject:
   m_ObjectHideFlags: 0
