@@ -10,7 +10,6 @@ public class ShootLaser : MonoBehaviour {
     [SerializeField] private Transform target;
     [SerializeField] private Transform cameraView; 
     public float force = 20.0f;
-    public float shootsPerCharge = 50f;
     private float _shoots;
     
     void Start(){
@@ -32,7 +31,7 @@ public class ShootLaser : MonoBehaviour {
     	}
         
         else if (Input.GetKeyDown(shootCode)) {
-        	_shoots = 3;
+        	_shoots = 4;
             // instantiate a new laser at current position 
             var outLaser = Instantiate(laser, target.position, Quaternion.identity);
             // must have a rigid body 

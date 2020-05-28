@@ -30,7 +30,7 @@ public class SpaceshipController : MonoBehaviour {
     public float secondsBetweenForces = 8f;
     public float forceDuration = 2f;
     // ROLLING VARIABLES 
-    public float totalRolls = 10f;
+    public float totalRolls = 2f;
     public float rollSpeed = 15f; // roll speed is angles per frame 
     
     private void Start() {
@@ -77,6 +77,8 @@ public class SpaceshipController : MonoBehaviour {
     private void RollRotate() {
         transform.Rotate(new Vector3(0, 0, 1), rollSpeed * Time.deltaTime);
         _rollingAngle += rollSpeed * Time.deltaTime;
+        transform.position += new Vector3(Time.deltaTime * movementSpeed * _horInput, 0, 0);
+        transform.position += new Vector3(0, Time.deltaTime * movementSpeed * _vertInput, 0);
         if (_rollingAngle >= COMPLETE_ROLL * totalRolls) {
             _rolling = false;
             _rollingAngle = 0; 
