@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 30737784}
   - component: {fileID: -5236522981950849523}
   - component: {fileID: 1437441907329851116}
+  - component: {fileID: 1859132731}
   m_Layer: 0
   m_Name: Granga Fighter
   m_TagString: Untagged
@@ -182,9 +183,10 @@ MonoBehaviour:
   target: {fileID: 0}
   origin: {fileID: 3172643272650056170}
   predictionPos: {x: 0, y: 0, z: 0}
-  shootsPerCharge: 70
+  shootsPerCharge: 50
   force: 6000
-  attackDistance: 200
+  attackDistance: 500
+  player: {x: 0, y: 0, z: 0}
 --- !u!114 &30737784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +230,19 @@ CapsuleCollider:
   m_Height: 18.168224
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1859132731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172643272650056170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additive: 300
 --- !u!1 &3611509098877729664
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 934832651409599067}
   - component: {fileID: 6901124574595733154}
   - component: {fileID: 6353758866634381187}
+  - component: {fileID: 863798408}
+  - component: {fileID: 863798402}
+  - component: {fileID: 863798403}
+  - component: {fileID: 863798406}
   m_Layer: 0
   m_Name: Venom Fighter
   m_TagString: Untagged
@@ -26,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5186297598715978366}
-  m_LocalRotation: {x: 0.000000087840675, y: -7.688236e-15, z: 0.00000008752477, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.2458496, y: 39.3, z: -793.24097}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
@@ -96,8 +100,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9890f45aed4964e8dff0498b81010a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 100}
+  offset: {x: 0, y: 0, z: 50}
+  target: {fileID: 0}
   speed: 2
+  waitTime: 30
+--- !u!65 &863798408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186297598715978366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 76.275, y: 68.3072, z: 133.0138}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &863798402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186297598715978366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f0e744d5bf9bd43839e154fb12ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 3
+  explosionPrefab: {fileID: 1840133731154982502, guid: 30d63603956ac854197850ca68fbea39,
+    type: 3}
+--- !u!114 &863798403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186297598715978366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177602462554da43b4c8f90f606c2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additive: 100
+--- !u!114 &863798406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186297598715978366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f01eeae1f6f5945a6dc5f57ee0abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser: {fileID: 100000, guid: 2d4daa5178825504d8b4479f83f5f533, type: 3}
+  target: {fileID: 0}
+  origin: {fileID: 5186297598715978366}
+  predictionPos: {x: 0, y: 0, z: 0}
+  shootsPerCharge: 50
+  force: 6000
+  attackDistance: 500
+  player: {x: 0, y: 0, z: 50}
 --- !u!1 &5925245123270146588
 GameObject:
   m_ObjectHideFlags: 0

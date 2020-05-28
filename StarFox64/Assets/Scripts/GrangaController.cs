@@ -9,7 +9,9 @@ public class GrangaController : MonoBehaviour {
     
     public float speed = 10f;
 
-    void Update() {
-          transform.position += new Vector3(0, 0, -speed * Time.deltaTime);      
+    void Update()
+    {
+        Vector3 dir = (target.transform.position - transform.position).normalized; 
+          transform.position += dir * (speed * Time.deltaTime);      
     }
 }
